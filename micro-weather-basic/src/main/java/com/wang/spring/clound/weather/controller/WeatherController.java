@@ -20,11 +20,13 @@ public class WeatherController {
     @Autowired
     private WeatherDataService weatherDataService;
 
+    //通过城市id查询天气
     @RequestMapping("/cityId/{cityId}")
     public WeatherResponse getWeatherByCityId(@PathVariable("cityId") String cityId){
         return weatherDataService.getDataByCityId(cityId);
     }
 
+    //通过城市名称查询天气
     @RequestMapping("/cityName/{cityName}")
     public WeatherResponse getWeatherByCityName(@PathVariable("cityName") String cityName){
         return weatherDataService.getDataByCityName(cityName);
