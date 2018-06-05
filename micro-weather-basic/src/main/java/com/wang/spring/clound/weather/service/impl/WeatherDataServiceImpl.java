@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 public class WeatherDataServiceImpl implements WeatherDataService{
 
     private static final String WEATHER_URI = "http://wthrcdn.etouch.cn/weather_mini?";
-    private static final long TIME_OUT = 1800L; //实际1800s
+    private static final long TIME_OUT = 20L; //实际1800s
 
     @Autowired
     private RestTemplate restTemplate;
