@@ -12,6 +12,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+
+import javax.annotation.Resource;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -25,8 +27,8 @@ public class WeatherDataServiceImpl implements WeatherDataService{
     private static final String WEATHER_URI = "http://wthrcdn.etouch.cn/weather_mini?";
     private static final long TIME_OUT = 20L; //实际1800s
 
-    @Autowired
-    private RestTemplate restTemplate;
+    @Resource(name = "redisTemplate")
+    private RestTemplate<String, Object> restTemplate;
 
     @Autowired
     private StringRedisTemplate redisTemplate;
