@@ -10,4 +10,5 @@ public interface WeatherDataService {
 
     public WeatherResponse getDataByCityId(String cityId);
     public WeatherResponse getDataByCityName(String cityName);
+    WeatherResponse getDataByCityNameWithJedis(String cityName);
 }

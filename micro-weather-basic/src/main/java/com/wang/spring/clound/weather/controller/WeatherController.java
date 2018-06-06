@@ -29,6 +29,7 @@ public class WeatherController {
     //通过城市名称查询天气
     @RequestMapping("/cityName/{cityName}")
     public WeatherResponse getWeatherByCityName(@PathVariable("cityName") String cityName){
-        return weatherDataService.getDataByCityName(cityName);
+        return weatherDataService.getDataByCityNameWithJedis(cityName);
     }
+
 }
