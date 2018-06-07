@@ -47,6 +47,8 @@ dependencies {
     compile('org.apache.commons:commons-pool2:2.4.2')
 	//Quartz
 	compile('org.springframework.boot:spring-boot-starter-quartz')
+	//添加springboot Thymeleaf Starter的依赖
+	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 compileJava.dependsOn(processResources)
